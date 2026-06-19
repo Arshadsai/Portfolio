@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        html{
+    scroll-behavior: smooth;
+}
+        body{
+            overflow-x: hidden;
+        }
+        header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1e22;
+    overflow: hidden;
+    padding: 0 20px;
+}
+        #navbar{
+            background-color: #1c1e22;
+            display: flex;
+            overflow: hidden;
+            justify-content: right;
+        }
+#navbar a:hover{
+    color: #a8d8ff;
+    transition: 0.3s;
+}
+        a{
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        #home{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #929aad;
+            color:#f8f9f1;
+        }
+        #about{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #878e9d;
+            color:#f8f9f1;
+        }
+#education{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7a8291;
+    color:#f8f9f1;
+}        #portfolio{
+            padding: 20px;
+            background-color: #929aad;
+            color:#f8f9f1;
+            display: flex;
+        }
+        #prof{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 5px;
+        }
+        #proc{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+	   object-fit:cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation-name: float;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes float{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-20px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        #details{
+            border: 1px solid #f8f9f1;
+            padding: 5px;
+            border-radius: 5%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #skills{
+            background-color: #878e9d;
+            align-items: center;
+            padding: 20px;
+            display:grid;
+            
+        }
+        #skills:hover{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+       .ski{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 80px;
+
+    color: #f8f9f1;
+    transition: 0.3s;
+}
+        #portfolio section{
+            background-color: #696a6c;
+            color:#f8f9f1;
+            margin: 10px;
+            padding: 10px;
+            height: 180px;
+            width: 350px;
+            border-radius: 5%;
+	   transition: 0.3s;
+}
+
+#portfolio section:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+        .ski{
+    transition: 0.3s;
+}
+.hero-btn{
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 12px 24px;
+    background-color: #1c1e22;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover{
+    background-color: #2f3338;
+    transform: translateY(-3px);
+}
+
+.ski:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 9px 8px rgba(60, 123, 165, 0.2);
+    transform: translateY(-5px);
+}
+        @media screen and (max-width: 768px) {
+            #home, #about, #portfolio{
+                flex-direction: column;
+                text-align: center;
+            }
+            #skills{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+            
+        }
+        @media screen and (min-width: 769px) {
+            #skills{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                overflow: hidden;
+            }
+        }
+        #contact{
+            background-color: #929aad;
+            padding: 20px;
+            color:#f8f9f1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <p style="text-align: left; color:#f8f9f1">Portfolio</p>
+
+    <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</header>
+
+<div id="home">
+    <div>
+        <h2>I'm Arshad Sai</h2>
+       <p>
+    Computer Engineering Student
+</p>
+
+<p>
+    Passionate about building responsive websites,
+    solving problems, and learning modern technologies.
+</p>
+
+<a href="#portfolio" class="hero-btn">🚀 View Projects</a>
+<a href="#contact" class="hero-btn">📩 Contact Me</a>
+    </div>
+
+    <div>
+        <img src="pro.jpg" alt="Profile Image" id="proc">
+    </div>
+</div>
+
+<div id="about">
+    <section id="pic">
+        <img src="pro.jpg" alt="Profile Image" id="prof">
+    </section>
+
+    <section id="details">
+        <h2>About Me</h2>
+
+        <p>
+            I am a B.Tech Computer Engineering student at
+            Lakireddy Bali Reddy College of Engineering (LBRCE),
+            Vijayawada.
+        </p>
+
+        <p>
+            I have skills in C++, Python, Java, HTML, CSS,
+            JavaScript, Git, Data Structures, and Algorithms.
+            I enjoy building projects, solving problems, and
+            continuously learning new technologies.
+        </p>
+    </section>
+</div>
+<div id="education">
+    <section id="details">
+        <h2>Education</h2>
+
+    <p><strong>B.Tech Computer Engineering</strong></p>
+
+        <p>
+            Lakireddy Bali Reddy College of Engineering
+        </p>
+
+        <p>
+            Expected Graduation: 2028
+        </p>
+    </section>
+</div>
+<h2 style="text-align:center;">Projects</h2>
+<div id="portfolio">
+    <section>
+        <h3>FD Calculator</h3>
+        <p>
+            A Fixed Deposit Calculator built using HTML, CSS, and JavaScript
+            that calculates maturity amount, interest earned, and total returns
+            based on user inputs.
+        </p>
+    </section>
+
+    <section>
+        <h3>Digital Clock</h3>
+        <p>
+            A real-time Digital Clock developed using HTML, CSS, and JavaScript.
+            It displays the current time with automatic updates every second
+            and features a responsive user interface.
+        </p>
+</section>
+
+    <section>
+        <h3>Portfolio Website</h3>
+        <p>
+            A responsive personal portfolio website developed
+            using HTML and CSS to showcase my skills, projects,
+            and contact information.
+        </p>
+    </section>
+</div>
+
+
+<h2 style="text-align:center;"><u>Skills</u></h2>
+
+<div id="skills">
+    <section class="ski">C++</section>
+    <section class="ski">Python</section>
+    <section class="ski">Java</section>
+    <section class="ski">HTML/CSS</section>
+    <section class="ski">JavaScript</section>
+    <section class="ski">Git</section>
+    <section class="ski">Data Structures</section>
+    <section class="ski">Algorithms</section>
+    <section class="ski">Problem Solving</section>
+</div>
+
+<div id="contact">
+    <h2>Contact</h2>
+
+
+    <p>Email: shaikarshadsai@gmail.com</p>
+    <p>Phone: +91 9494131951</p>
+    <p>Location: Vijayawada, Andhra Pradesh</p>
+
+   
+
+
+<a href="resume_sai.pdf" download>
+    📄 Download My Resume
+</a>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=shaikarshadsai@gmail.com" target="_blank">
+    📧 Send Me an Email
+</a>
+
+<a href="https://www.linkedin.com/in/arshad-sai-shaik-954a58336" target="_blank">
+    💼 Visit My LinkedIn Profile
+</a>
+
+<a href="https://github.com/Arshadsai" target="_blank">
+    💻 View My GitHub Projects
+</a>
+</div>
+
+<footer style="background-color: #1c1e22; color:#f8f9f1; text-align: center; padding: 10px;">
+    &copy; 2026 Arshad Sai. All rights reserved.
+</footer>
+
+</body>
